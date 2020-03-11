@@ -5,11 +5,11 @@ import java.util.ArrayList;
 
 public class Personnel 
 {
-	private String nom;
-	private String prenom;
-	private String fonctions;
-	private LocalDate dateNaissance;
-	private ArrayList<String> telephone;
+	String nom;
+	String prenom;
+	String fonctions;
+	LocalDate dateNaissance;
+	ArrayList<String> telephone;
 	
 	public static class builder
 	{

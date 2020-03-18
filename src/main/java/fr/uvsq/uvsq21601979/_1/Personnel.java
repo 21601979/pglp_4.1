@@ -42,6 +42,16 @@ public class Personnel  implements groupe
 			return new Personnel(this); 
 		}
 	}
+	
+	public void affiche(int i)
+	{
+		int j;
+		for(j=0;j<i;j++)
+		{
+			System.out.println("-");
+		}
+		System.out.println(nom+" "+prenom+"\n");
+	}
 
 	private Personnel(builder b)
 	{

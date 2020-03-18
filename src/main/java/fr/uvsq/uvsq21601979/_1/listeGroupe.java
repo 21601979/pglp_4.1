@@ -25,9 +25,9 @@ public class listeGroupe implements Iterable<groupe>
 		return l.get(i);
 	}
 
-	public Iterator<groupe> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+	public Iterator<groupe> iterator() 
+	{
+		return new groupeIterator(l);
 	}
 	
 }

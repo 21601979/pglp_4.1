@@ -19,4 +19,19 @@ public class groupeCompositeTest
 		g.add(g2);
 		assertEquals(g.l.get(0),p);
 	}
+	
+	public void lecture_compositeTest()
+	{
+		groupeComposite g = new groupeComposite();
+		groupeComposite g2 = new groupeComposite();
+
+		builder b = new builder("bow","ser",LocalDate.of(1, 1, 1));
+		Personnel p = b.build();
+		builder b2 = new builder("ma","rio",LocalDate.of(1, 1, 1));
+		Personnel p2 = b2.build();
+		g.add(p);
+		g.add(g2);
+		g2.add(p2);
+		g.affiche(0);
+	}
 }

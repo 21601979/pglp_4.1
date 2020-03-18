@@ -1,5 +1,6 @@
 package fr.uvsq.uvsq21601979._1;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public class groupeIterator implements Iterator<groupe>
@@ -7,7 +8,7 @@ public class groupeIterator implements Iterator<groupe>
 	listeGroupe l;
 	int cont = 0;
 	
-	public groupeIterator(listeGroupe l)
+	public groupeIterator(ArrayList<groupe> l2)
 	{
 		this.l = l;
 	}

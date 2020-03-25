@@ -10,20 +10,20 @@ public class groupeCompositeTest
 {
 	public void addTest()
 	{
-		groupeComposite g = new groupeComposite();
-		groupeComposite g2 = new groupeComposite();
+		GroupeComposite g = new GroupeComposite();
+		GroupeComposite g2 = new GroupeComposite();
 
 		builder b = new builder("bow","ser",LocalDate.of(1, 1, 1));
 		Personnel p = b.build();
 		g.add(p);
 		g.add(g2);
-		assertEquals(g.l.get(0),p);
-	}
+		assertEquals(g.getL().get(0),p);
+	} 
 	
 	public void lecture_compositeTest()
 	{
-		groupeComposite g = new groupeComposite();
-		groupeComposite g2 = new groupeComposite();
+		GroupeComposite g = new GroupeComposite();  
+		GroupeComposite g2 = new GroupeComposite();
 
 		builder b = new builder("bow","ser",LocalDate.of(1, 1, 1));
 		Personnel p = b.build();

@@ -14,9 +14,9 @@ public class PersonnelTest
 	public void builderTest()
 	{
 		builder b = new builder("bow","ser",LocalDate.of(1, 1, 1));
-		assertEquals(b.nom,"bow");
-		assertEquals(b.prenom,"ser");
-		assertEquals(b.dateNaissance,LocalDate.of(1, 1, 1));
+		assertEquals(b.getNom(),"bow");
+		assertEquals(b.getPrenom(),"ser");
+		assertEquals(b.getDateNaissance(),LocalDate.of(1, 1, 1));
 	}
 	
 	@Test
@@ -24,7 +24,7 @@ public class PersonnelTest
 	{
 		builder b = new builder("bow","ser",LocalDate.of(1, 1, 1));
 		b.setfonction("roi");
-		assertEquals(b.fonctions,"roi");
+		assertEquals(b.getFonctions(),"roi");
 	}
 	
 	@Test
@@ -32,7 +32,7 @@ public class PersonnelTest
 	{
 		builder b = new builder("bow","ser",LocalDate.of(1, 1, 1));
 		b.settelephone("0000000000");
-		assertEquals(b.telephone.get(0),"0000000000");
+		assertEquals(b.getTelephone().get(0),"0000000000");
 	}
 	
 	@Test
@@ -42,10 +42,10 @@ public class PersonnelTest
 		b.setfonction("roi");
 		b.settelephone("0000000000");
 		Personnel p = b.build();
-		assertEquals(p.nom,"bow");
-		assertEquals(p.prenom,"ser");
-		assertEquals(p.dateNaissance,LocalDate.of(1, 1, 1));
-		assertEquals(p.fonctions,"roi");
-		assertEquals(p.telephone.get(0),"0000000000");
+		assertEquals(p.getNom(),"bow");
+		assertEquals(p.getPrenom(),"ser");
+		assertEquals(p.getDateNaissance(),LocalDate.of(1, 1, 1));
+		assertEquals(p.getFonctions(),"roi");
+		assertEquals(p.getTelephone().get(0),"0000000000");
 	}
 }

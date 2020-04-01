@@ -68,6 +68,14 @@ final class Personnel  implements Groupe {
             this.fonctions = "";
             this.telephone = new ArrayList<String>();
             }
+        /**
+         * methode qui ajoute une date de naissance .
+         * @param dateNaissance date de naissance
+         */
+        private void setDateNaissance(LocalDate dateNaissance) 
+        {
+            this.dateNaissance  = dateNaissance;    
+        }
 
         /**
          * methode qui ajoute une fonction.
